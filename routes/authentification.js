@@ -5,7 +5,6 @@ const { connection } = require("../config");
 
 router.post("/register", (req, res) => {
   const { pseudo, password } = req.body;
-  console.log("gggg");
   connection.query(
     "INSERT INTO manager(pseudo, password) VALUES(?, ?)",
     [pseudo, password],
